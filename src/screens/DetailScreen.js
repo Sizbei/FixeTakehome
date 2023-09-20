@@ -1,9 +1,10 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 
-function DetailScreen({ restaurants }) {
-  const { id } = useParams();
-  const restaurant = restaurants.find((r) => r.id === id);
+function DetailScreen() {
+  const location = useLocation();
+  // const { id } = useParams();
+  let restaurant = location.state.restaurant;
 
   if (!restaurant) {
     return <div>Restaurant not found</div>;
@@ -14,7 +15,7 @@ function DetailScreen({ restaurants }) {
       <h2>Restaurant Details</h2>
       <p>Name: {restaurant.name}</p>
       <p>Notes: {restaurant.notes}</p>
-      <p>Primary Location Address: {restaurant.locations[0].address}</p>
+      <p>Primary Location Address: {restaurant.locations[0].address_line_1}</p>
       <Link to="/">Back to List</Link>
     </div>
   );

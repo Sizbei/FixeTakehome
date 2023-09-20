@@ -28,7 +28,12 @@ function RestaurantTable({ restaurants }) {
             <TableRow key={restaurant.id}>
               <TableCell>{restaurant.id}</TableCell>
               <TableCell>
-                <Link to={`/detail/${restaurant.id}`}>{restaurant.name}</Link>
+                <Link
+                  to={`/detail/${restaurant.id}`}
+                  state={{ restaurant: restaurant }}
+                >
+                  {restaurant.name}
+                </Link>
               </TableCell>
               <TableCell>{restaurant.supportEmail}</TableCell>
               <TableCell>{restaurant.createdOn}</TableCell>
