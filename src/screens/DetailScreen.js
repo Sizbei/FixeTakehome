@@ -13,7 +13,7 @@ function DetailScreen() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-400 to-blue-400 space-y-6 p-8 rounded-lg shadow-md flex justify-center">
-      <div className=" w-1/4 h-1/3 bg-white space-y-5 p-8 rounded-lg shadow-md">
+      <div className=" w-1/4 h-1/3 bg-white space-y-8 p-8 rounded-lg shadow-md">
         <div className="text-center">
           <h2 className="text-3xl font-bold  text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-blue-400 mb-2">
             Restaurant Details
