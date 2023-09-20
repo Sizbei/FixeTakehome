@@ -19,8 +19,13 @@ function ListScreen() {
   }, []);
 
   return (
-    <div>
-      <h1>List of Active Restaurants</h1>
+    <div className="min-h-screen flex flex-col items-center justify-center space-y-8 p-10 bg-gray-100">
+      <div className="text-center">
+        <h1 className="text-3xl font-bold underline text-gray-700">
+          List of Active Restaurants
+        </h1>
+      </div>
+
       <RestaurantTable restaurants={restaurants} />
     </div>
   );

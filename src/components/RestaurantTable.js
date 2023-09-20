@@ -16,11 +16,21 @@ function RestaurantTable({ restaurants }) {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>ID</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell>Support Email</TableCell>
-            <TableCell>Date</TableCell>
-            <TableCell>Number of Locations</TableCell>
+            <TableCell>
+              <b>ID</b>
+            </TableCell>
+            <TableCell>
+              <b>Name</b>
+            </TableCell>
+            <TableCell>
+              <b>Support Email</b>
+            </TableCell>
+            <TableCell>
+              <b>Date</b>
+            </TableCell>
+            <TableCell>
+              <b>Number of Locations</b>
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
