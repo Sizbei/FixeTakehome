@@ -35,16 +35,13 @@ function RestaurantTable({ restaurants }) {
         </TableHead>
         <TableBody className="bg-gradient-to-br from-white to-blue-100">
           {restaurants.map((restaurant) => (
-            <TableRow key={restaurant.id}>
+            <TableRow
+              component={Link}
+              state={{ restaurant: restaurant }}
+              to={`/detail/${restaurant.id}`}
+              key={restaurant.id}>
               <TableCell className="px-4 py-2">{restaurant.id}</TableCell>
-              <TableCell className="px-4 py-2">
-                <Link
-                  to={`/detail/${restaurant.id}`}
-                  state={{ restaurant: restaurant }}
-                  className="text-blue-500 hover:underline">
-                  {restaurant.name}
-                </Link>
-              </TableCell>
+              <TableCell className="px-4 py-2">{restaurant.name}</TableCell>
               <TableCell className="px-4 py-2">
                 {restaurant.supportEmail}
               </TableCell>
