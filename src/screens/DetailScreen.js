@@ -12,16 +12,18 @@ function DetailScreen() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8 rounded-lg shadow-md">
-      <h2 className="text-2xl font-semibold mb-4">Restaurant Details</h2>
-      <p className="mb-2">Name: {restaurant.name}</p>
-      <p className="mb-2">Notes: {restaurant.notes}</p>
-      <p className="mb-4">
-        Primary Location Address: {restaurant.locations[0].address_line_1}
-      </p>
-      <Button variant="contained">
-        <Link to="/">Back to List</Link>
-      </Button>
+    <div className="min-h-screen bg-gray-200 space-y-8 p-8 rounded-lg shadow-md">
+      <div className=" bg-gray-100 space-y-8 p-8 rounded-lg shadow-md">
+        <h2 className="text-2xl font-semibold mb-4">Restaurant Details</h2>
+        <p className="mb-2">Name: {restaurant.name}</p>
+        <p className="mb-2">Notes: {restaurant.notes}</p>
+        <p className="mb-4">
+          Primary Location Address: {restaurant.locations[0].address_line_1}
+        </p>
+        <Button variant="contained">
+          <Link to="/">Back to List</Link>
+        </Button>
+      </div>
     </div>
   );
 }
