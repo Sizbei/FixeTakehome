@@ -19,14 +19,16 @@ function ListScreen() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center space-y-8 p-10 bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-3xl font-bold underline text-gray-700">
-          List of Active Restaurants
-        </h1>
-      </div>
+    <div className="min-h-screen items-center justify-center space-y-8 p-5 bg-gradient-to-b from-purple-400 to-blue-400">
+      <div className="min-h-screen flex flex-col items-center justify-center space-y-8 p-10 bg-white">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-blue-400 ">
+            List of Active Restaurants
+          </h1>
+        </div>
 
-      <RestaurantTable restaurants={restaurants} />
+        <RestaurantTable restaurants={restaurants} />
+      </div>
     </div>
   );
 }

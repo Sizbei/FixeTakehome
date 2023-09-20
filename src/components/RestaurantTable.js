@@ -12,41 +12,48 @@ import {
 
 function RestaurantTable({ restaurants }) {
   return (
-    <TableContainer component={Paper}>
-      <Table>
-        <TableHead>
+    <TableContainer component={Paper} className="rounded-lg shadow-lg">
+      <Table className="min-w-full">
+        <TableHead className="bg-gray-200">
           <TableRow>
-            <TableCell>
+            <TableCell className="px-4 py-2">
               <b>ID</b>
             </TableCell>
-            <TableCell>
+            <TableCell className="px-4 py-2">
               <b>Name</b>
             </TableCell>
-            <TableCell>
+            <TableCell className="px-4 py-2">
               <b>Support Email</b>
             </TableCell>
-            <TableCell>
+            <TableCell className="px-4 py-2">
               <b>Date</b>
             </TableCell>
-            <TableCell>
+            <TableCell className="px-4 py-2">
               <b>Number of Locations</b>
             </TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody className="bg-gradient-to-br from-white to-blue-100">
           {restaurants.map((restaurant) => (
             <TableRow key={restaurant.id}>
-              <TableCell>{restaurant.id}</TableCell>
-              <TableCell>
+              <TableCell className="px-4 py-2">{restaurant.id}</TableCell>
+              <TableCell className="px-4 py-2">
                 <Link
                   to={`/detail/${restaurant.id}`}
-                  state={{ restaurant: restaurant }}>
+                  state={{ restaurant: restaurant }}
+                  className="text-blue-500 hover:underline">
                   {restaurant.name}
                 </Link>
               </TableCell>
-              <TableCell>{restaurant.supportEmail}</TableCell>
-              <TableCell>{restaurant.createdOn}</TableCell>
-              <TableCell>{restaurant.locations.length}</TableCell>
+              <TableCell className="px-4 py-2">
+                {restaurant.supportEmail}
+              </TableCell>
+              <TableCell className="px-4 py-2">
+                {restaurant.createdOn}
+              </TableCell>
+              <TableCell className="px-4 py-2">
+                {restaurant.locations.length}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

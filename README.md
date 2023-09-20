@@ -31,7 +31,7 @@ This is a simple React web application that allows you to view a list of active 
 1. **Start Development Server:**
 
    ```shell
-   npm install
+   npm start
 
    ```
 

@@ -12,15 +12,19 @@ function DetailScreen() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-200 space-y-8 p-8 rounded-lg shadow-md">
-      <div className=" bg-gray-100 space-y-8 p-8 rounded-lg shadow-md">
-        <h2 className="text-2xl font-semibold mb-4">Restaurant Details</h2>
-        <p className="mb-2">Name: {restaurant.name}</p>
-        <p className="mb-2">Notes: {restaurant.notes}</p>
-        <p className="mb-4">
-          Primary Location Address: {restaurant.locations[0].address_line_1}
+    <div className="min-h-screen bg-gradient-to-b from-purple-400 to-blue-400 space-y-6 p-8 rounded-lg shadow-md flex justify-center">
+      <div className=" w-1/4 h-1/3 bg-white space-y-5 p-8 rounded-lg shadow-md">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold  text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-blue-400 mb-2">
+            Restaurant Details
+          </h2>
+        </div>
+        <p className=" text-xl mb-2">
+          <t className=" text-xl font-semibold mb-2 "> {restaurant.name}</t>,{" "}
+          {restaurant.locations[0].address_line_1}
         </p>
-        <Button variant="contained">
+        <p className="text-xl mb-8">Notes: {restaurant.notes}</p>
+        <Button variant="contained" color="primary">
           <Link to="/">Back to List</Link>
         </Button>
       </div>
