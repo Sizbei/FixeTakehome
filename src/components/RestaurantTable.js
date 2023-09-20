@@ -30,8 +30,7 @@ function RestaurantTable({ restaurants }) {
               <TableCell>
                 <Link
                   to={`/detail/${restaurant.id}`}
-                  state={{ restaurant: restaurant }}
-                >
+                  state={{ restaurant: restaurant }}>
                   {restaurant.name}
                 </Link>
               </TableCell>
